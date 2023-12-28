@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffd102;
+}
+
+.text {
+    font-family: 'Indie Flower', cursive;
+    text-align: left;
+    padding-left: 7%;
+    padding-top: 10%;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 900;
+    margin-top: 10%;
+}
+
+.bold-happiness, .adventure {
+    color: #f45948;
+    font-size: 33px;
+    text-shadow: none;
+}
+
+.cercle {
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background-image: url('4452317.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: -300px;
+    right: -200px;
+    border-bottom-right-radius: 100px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.cercle > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Logo-container {
+    position: relative;
+}
+
+.burger-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: auto;
+    margin-left: 5%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 0;
+    transition: 0.3s;
+}
+
+.burger-logo:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.burger-logo .text {
+    display: flex;
+}
+
+.text1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: 800;
+    color: #f45948;
+}
+
+.text1 .burger-logo {
+    display: flex;
+}
+
+.BURFAN {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+    margin:10; /* Add top margin for spacing */
+}
+
+.custom-button {
+    background-color: #f45948;
+    color: #fff;
+    padding: 15px 25px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 3%;
+    margin-left: 7%;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #363737;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.custom-button:active {
+    background-color: #fff;
+    color: #f45948;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-color: #f45948;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    border-radius: 21px;
+    width: 75%;
+    height: 75%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    z-index: 2;
+    max-width:100%;
+
+}
+
+.ingredients-section {
+    width: 40%;
+    height: 80%;
+    padding: 20px;
+    padding-right: 15px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+.ingredients-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f45948;
+    padding-left: 20px;
+}
+
+.ingredients-section ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.ingredients-section li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.ingredients-section li input {
+    display: none; /*Hide the default checkbox*/
+}
+
+.ingredients-section li input:checked + label::before {
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 25px;
+    color: #f45948;
+    margin-right: 5px; /* Adjusted margin to separate checkmark from text */
+}
+
+.ingredients-section li label {
+    font-size: 25px;
+    color: #333;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .ingredients-section {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .ingredients-section li input {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 2px solid #f45948;
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .ingredients-section li input:checked + label::before {
+        content: '\2713';
+        font-size: 24px;
+        position: absolute;
+        left: -30px;
+        top: 5px;
+        color: #f45948;
+        display: inline-block;
+    }
+
+    .ingredients-section li label {
+        font-size: 18px;
+        color: #333;
+        cursor: pointer;
+    }
+}
+
+.buns-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.bun {
+    width: 200px;
+    height: 30px;
+    background-color: #d3a070; 
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.lower-bun {
+    border-radius: 50px 50px 10px 10px;
+    height:50px;
+}
+
+.lettuce,
+.Tomato,
+.Cheese {
+    width: 200px;
+    height: 10px;
+    position: relative;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    z-index: 10;   
+}
+.Meat{
+    width: 200px;
+    height: 35px;
+    position: relative;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    z-index: 10;
+
+}
+.lettuce {
+    background-color: #4CAF50;
+}
+
+.Meat {
+    background-color: #6c2009;
+}
+
+.Tomato {
+    background-color: #ff6347;
+}
+
+.Cheese {
+    background-color: #FBDB65;
+}
+
+.upper-bun {
+    border-radius: 10px 10px 50px 50px;
+}
+
+.spot,
+.seed {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.spot {
+    width: 8px;
+    height: 8px;
+    background-color: #7d5a42; /* Color for spots */
+}
+
+.seed {
+    width: 5px;
+    height: 5px;
+    background-color: #c0a080; /* Color for seeds */
+}
+
+
+.bun .spot-1 { top: 7px; left: 5px; }
+.bun .spot-2 { top: 15px; left: 20px; }
+.bun .spot-3 { top: 5px; right: 15px; }
+.bun .spot-4 { bottom: 12px; right: 5px; }
+
+.bun .seed-1 { top: 6px; left: 28px; }
+.bun .seed-2 { top: 15px; left: 10px; }
+.bun .seed-3 { top: 3px; right: 10px; }
+.bun .seed-4 { bottom: 10px; right: 23px; }
+
+.element{
+    display: none;
+}
+.glow-on-hover {
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 42px;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transform: rotate(45deg);
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
