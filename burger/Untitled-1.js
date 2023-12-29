@@ -53,13 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Step 1: Initialize checkboxes with the value false
   let checkboxes = document.querySelectorAll('input[type="checkbox"]');
   checkboxes.forEach(function (checkbox) {
     checkbox.checked = false;
   });
 
-  // Step 2: Function to handle checkbox change event
   function handleCheckboxChange(checkbox, ingredient) {
     if (checkbox.checked) {
       ingredient.style.display = "block";
@@ -68,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Step 3: Apply the function manually for each checkbox and ingredient
   let lettuceCheckbox = document.getElementById("lettuce");
   let lettuceIngredient = document.querySelector(".lettuce");
 
