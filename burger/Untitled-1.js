@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   const makeSandwichBtn = document.getElementById("makeSandwichBtn");
   const modal = document.querySelector(".modal");
-  const elements = document.querySelector(".elements");
-  const bunsContainer = document.querySelector(".buns-container");
+  //const elements = document.querySelector(".elements");
+  //const bunsContainer = document.querySelector(".buns-container");
   const lettuceCheckbox = document.getElementById("lettuce");
-  const tomatoCheckbox = document.getElementById("tomato");
-  const cheeseCheckbox = document.getElementById("cheese");
-  const meatCheckbox = document.getElementById("Meat");
+  //   const tomatoCheckbox = document.getElementById("tomato");
+  //   const cheeseCheckbox = document.getElementById("cheese");
+  //   const meatCheckbox = document.getElementById("Meat");
 
   makeSandwichBtn.addEventListener("click", function () {
     modal.style.display = "flex";
