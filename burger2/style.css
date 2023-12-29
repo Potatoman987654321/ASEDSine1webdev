@@ -1,0 +1,93 @@
+.bread {
+  height: 100px;
+  width: 400px;
+  margin: 0 auto;
+  border: 5px solid #693d03;
+  display: none;
+  background: radial-gradient(circle, #f5e5a4, #e4c177 30%, #e4c177 70%, #c5943e);
+  border-radius: 50%;
+}
+
+#tbread {
+  margin-bottom: 10px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+#lbread {
+  border-top-left-radius: 50px;
+  margin-top: 10px;
+  border-top-right-radius: 50px;
+}
+
+.filling {
+  width: 350px;
+  height: 10px;
+  margin: 0 auto;
+  margin-top: 5px;
+  border-radius: 15px;
+  display: none;
+}
+
+#cheese {
+  background-color: #fbff00;
+
+}
+
+#meat {
+  background-color: #a73800;
+  height: 40px;
+
+}
+
+#lett {
+  background-color: #08a608;
+
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #adb893;
+  font-family: Arial, sans-serif;
+}
+
+#menu {
+  grid-column: 1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#burger {
+  grid-column: 2;
+}
+
+#menu {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.menu-item {
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.menu-item-input {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.menu-item-label {
+  font-size: 18px;
+}
+
+.menu-item-label:hover {
+  color: #f00;
+}
